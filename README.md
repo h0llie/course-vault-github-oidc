@@ -554,7 +554,7 @@ Ensure the `role` name matches between both steps in the workflow.
   TBD-step-4-notes.
 -->
 
-<details id=4 open>
+<details id=4>
 <summary><h2>Step 4: Fine-grained permissions - environments</h2></summary>
 
 _Nicely done with Step 3: Fine-grained permissions - branches! :partying_face:_
@@ -748,7 +748,7 @@ If the workflow fails, check the previous activities to ensure you've created tw
   Review what we learned, ask for feedback, provide next steps.
 -->
 
-<details id=5>
+<details id=5 open>
 <summary><h2>Finish</h2></summary>
 
 _Congratulations friend, you've completed this course! :1st_place_medal:_
