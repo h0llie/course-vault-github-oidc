@@ -63,14 +63,12 @@ jobs:
         env:
           VAULT_ADDR: http://127.0.0.1:8200
         run: |
-          vault write auth/gha/role/GIVE_ME_A_NAME - << EOF
+          vault write auth/gha/role/testy_role - << EOF
           {
             "role_type": "jwt",
             "user_claim": "actor",
             "bound_claims": {
-
-              # Fill in missing "sub" claim
-
+              "sub": "repo:h0llie/course-vault-github-oidc:ref:refs/head/main"
             },
             "policies": ["main-policy"],
             "ttl": "60s"
@@ -81,7 +79,7 @@ jobs:
         uses: hashicorp/vault-action@v2.4.3
         id: secrets
         with:
-          role: ""  # Don't forget to enter the role name you created above!
+          role: "testy_role"  # Don't forget to enter the role name you created above!
           # Retrieve a secret from the KV v2 secrets engine at the mount point `secret`.
           secrets: |
             secret/data/production access_token | ACCESS_TOKEN ;
