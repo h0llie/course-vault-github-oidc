@@ -68,7 +68,7 @@ jobs:
             "role_type": "jwt",
             "user_claim": "actor",
             "bound_claims": {
-              "sub": "repo:h0llie/course-vault-github-oidc:ref:refs/head/main"
+              "sub": "repo:h0llie/course-vault-github-oidc:ref:refs/heads/main"
             },
             "policies": ["main-policy"],
             "ttl": "60s"
